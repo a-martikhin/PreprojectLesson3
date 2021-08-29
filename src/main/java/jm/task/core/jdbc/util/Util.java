@@ -2,14 +2,10 @@ package jm.task.core.jdbc.util;
 
 import jm.task.core.jdbc.model.User;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.BootstrapServiceRegistryBuilder;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
-//import org.hibernate.service.ServiceRegistryBuilder;
-
-import javax.imageio.spi.ServiceRegistry;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -30,7 +26,7 @@ public class Util {
         return connection;
     }
 
-    public static SessionFactory sessionFactory;
+    private static SessionFactory sessionFactory;
     public static SessionFactory getSessionFactory(){
         if (sessionFactory == null){
             try{
@@ -42,9 +38,9 @@ public class Util {
                 settings.put(Environment.USER, USER);
                 settings.put(Environment.PASS, PASSWORD);
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
-                settings.put(Environment.SHOW_SQL, "true");
+                settings.put(Environment.SHOW_SQL, "false");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+//                settings.put(Environment.HBM2DDL_AUTO, "update");
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
 

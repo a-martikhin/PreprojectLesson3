@@ -13,7 +13,6 @@ public class UserDaoHibernateImpl implements UserDao {
 
     }
 
-
     @Override
     public void createUsersTable() {
         String createNewTable = "CREATE TABLE IF not exists users " +

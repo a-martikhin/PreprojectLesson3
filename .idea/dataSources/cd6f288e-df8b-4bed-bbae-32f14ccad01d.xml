@@ -1012,58 +1012,33 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Plugin>caching_sha2_password</Plugin>
     </user>
     <table id="287" parent="3" name="animal"/>
-    <table id="288" parent="3" name="users"/>
-    <column id="289" parent="287" name="id">
+    <column id="288" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="290" parent="287" name="anim_name">
+    <column id="289" parent="287" name="anim_name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="291" parent="287" name="anim_desc">
+    <column id="290" parent="287" name="anim_desc">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <index id="292" parent="287" name="id_UNIQUE">
+    <index id="291" parent="287" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="293" parent="287" name="PRIMARY">
+    <key id="292" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="294" parent="287" name="id_UNIQUE">
+    <key id="293" parent="287" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="295" parent="288" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="296" parent="288" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-    </column>
-    <column id="297" parent="288" name="lastName">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-    </column>
-    <column id="298" parent="288" name="age">
-      <Position>4</Position>
-      <DataType>tinyint|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="299" parent="288" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>
